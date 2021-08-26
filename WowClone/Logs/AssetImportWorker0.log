@@ -330,3 +330,4 @@ Received Import Request.
 Start importing Assets/Scenes/New Lighting Settings.lighting using Guid(8c520ad1b68352946bccbb98bbb6e70c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a5362e681d58935dcd7e4e7dd3d0e43') in 0.022498 seconds 
   Import took 0.025015 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
