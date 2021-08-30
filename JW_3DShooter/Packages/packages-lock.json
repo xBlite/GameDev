@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.thirsch.tools": {
+      "version": "file:C:/Users/Tyler/Unity Packages/Tools",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.7.1",
       "depth": 0,
