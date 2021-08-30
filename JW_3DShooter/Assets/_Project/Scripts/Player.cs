@@ -1,17 +1,19 @@
-using System;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace _Project.Scripts
 {
-    [SerializeField] private float _playerSpeed = 5f;
-    [SerializeField] private Transform _direction;
-    
-    void Update()
+    public class Player : MonoBehaviour
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        [SerializeField] private float _playerSpeed = 5f;
+        [SerializeField] private Transform _direction;
+    
+        void Update()
+        {
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(horizontal, 0f, vertical);
-        transform.Translate(movement * Time.deltaTime * _playerSpeed, _direction);
+            Vector3 movement = new Vector3(horizontal, 0f, vertical);
+            transform.Translate(movement * Time.deltaTime * _playerSpeed, _direction);
+        }
     }
 }

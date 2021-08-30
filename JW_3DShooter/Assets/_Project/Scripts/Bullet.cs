@@ -1,13 +1,23 @@
-﻿using UnityEngine;
+﻿using _Project.Scripts;
+using UnityEngine;
 
-public class Bullet : MonoBehaviour
+namespace _Project.Scripts
 {
-    private Gun _gun;
-
-    public void SetGun(Gun gun) => _gun = gun;
-    private void OnCollisionEnter(Collision other)
+    public class Bullet : MonoBehaviour
     {
-        gameObject.SetActive(false);
-        _gun.AddToPool(this);
+        private Gun _gun;
+        [SerializeField] private int _damage = 1;
+
+        public void SetGun(Gun gun) => _gun = gun;
+        private void OnCollisionEnter(Collision other)
+        {
+            this.gameObject.SetActive(false);
+            ShotPool.
+            
+            var enemy = other.collider.GetComponent<Enemy>();
+            if (enemy != null)
+                enemy.TakeDamage(_damage, other.contacts[0].point);
+            
+        }
     }
 }
