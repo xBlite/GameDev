@@ -1,5 +1,4 @@
-﻿using _Project.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace _Project.Scripts
 {
@@ -11,8 +10,7 @@ namespace _Project.Scripts
         public void SetGun(Gun gun) => _gun = gun;
         private void OnCollisionEnter(Collision other)
         {
-            this.gameObject.SetActive(false);
-            ShotPool.
+            BulletPool.Instance.ReturnToPool(this);
             
             var enemy = other.collider.GetComponent<Enemy>();
             if (enemy != null)
